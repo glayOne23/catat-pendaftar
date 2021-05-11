@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Nama</th>
+            <th>Kelompok</th>
+            <th>Bilangan</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($all_catatan as $no => $catatan)
+            <tr>
+                <td>{{$no+1}}</td>
+                <td>{{$catatan["created_at"]}}</td>
+                <td>{{$catatan["catatan"][0]}}</td>
+                <td>{{$catatan["catatan"][1]}}</td>
+                <td>{{$catatan["catatan"][2]}}</td>
+            </tr>
+        @endforeach
+    </tbody>
+</table>
